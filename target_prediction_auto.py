@@ -93,14 +93,14 @@ for i in arraymiRNA:
 
 def write(title,text):
     replaced = title.replace('/','-')
-    filename = "/Users/leolopelofranco/Desktop/computational_work/target_prediction_III/hiv_mrna/" + replaced + "/viral_miRNA_all_mature.fasta"
-    config = "/Users/leolopelofranco/Desktop/computational_work/target_prediction_III/hiv_mrna/" + replaced + "/configparams.txt"
-    mirsFile = 'mirsFile' + ' = ' + '/Users/leolopelofranco/Desktop/computational_work/target_prediction_III/hiv_mrna/' + replaced +'/viral_miRNA_all_mature.fasta' + '\n' + '\n'
-    UTRsFile = 'UTRsFile' + ' = ' + '/Users/leolopelofranco/Desktop/computational_work/target_prediction_III/hiv_mrna/hiv_mrna.fasta' + '\n' + '\n'
-    alignment = 'alignmentsFileLoc' + ' = ' + '/Users/leolopelofranco/Desktop/computational_work/target_prediction_III/hiv_mrna/' + replaced + '/' + '\n' + '\n'
+    filename = "/Users/Desktop/computational_work/target_prediction_III/hiv_mrna/" + replaced + "/viral_miRNA_all_mature.fasta"
+    config = "/Users/Desktop/computational_work/target_prediction_III/hiv_mrna/" + replaced + "/configparams.txt"
+    mirsFile = 'mirsFile' + ' = ' + '/Users/Desktop/computational_work/target_prediction_III/hiv_mrna/' + replaced +'/viral_miRNA_all_mature.fasta' + '\n' + '\n'
+    UTRsFile = 'UTRsFile' + ' = ' + '/Users/Desktop/computational_work/target_prediction_III/hiv_mrna/hiv_mrna.fasta' + '\n' + '\n'
+    alignment = 'alignmentsFileLoc' + ' = ' + '/Users/Desktop/computational_work/target_prediction_III/hiv_mrna/' + replaced + '/' + '\n' + '\n'
 
     ### remains constant ###
-    duplex = 'RNAduplexLoc = /Users/leolopelofranco/Desktop/computational_work/target_prediction/sample/ViennaRNA-2.1.8/Progs/'
+    duplex = 'RNAduplexLoc = /Users/Desktop/computational_work/target_prediction/sample/ViennaRNA-2.1.8/Progs/'
 
     ####
 
@@ -115,9 +115,9 @@ def write(title,text):
     with open(config, 'w') as i:
         i.write(params)
         i.close()
-    dst = "/Users/leolopelofranco/Desktop/computational_work/target_prediction_III/hiv_mrna/" + replaced + "/"
-    shutil.copy('/Users/leolopelofranco/Desktop/computational_work/target_prediction_III/targetPrediction.jar', dst)
-    shutil.copy('/Users/leolopelofranco/Desktop/computational_work/target_prediction_III/parameters.txt', dst)
+    dst = "/Users/Desktop/computational_work/target_prediction_III/hiv_mrna/" + replaced + "/"
+    shutil.copy('/Users/Desktop/computational_work/target_prediction_III/targetPrediction.jar', dst)
+    shutil.copy('/Users/Desktop/computational_work/target_prediction_III/parameters.txt', dst)
     if __name__ == "__main__":
        startingDir = os.getcwd()  # save our current directory
        testDir = dst
